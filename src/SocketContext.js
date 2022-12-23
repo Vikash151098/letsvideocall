@@ -4,8 +4,10 @@ import Peer from "simple-peer";
 
 const SocketContext = createContext();
 
-//Base URL- https://letsvideocall.herokuapp.com/
-const socket = io("https://letsvideocall.herokuapp.com");
+//Base URL- https://letsvideocall.onrender.com/
+const produrl="https://letsvideocall.onrender.com/";
+const devurl="http://localhost:5000"
+const socket = io(produrl);
 
 const ContextProvider = ({ children }) => {
   const [stream, setStream] = useState(null);
